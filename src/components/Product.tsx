@@ -24,7 +24,7 @@ export function Product({
   const truePrice = priceWithPromotion(productPrice, promotionPercent)
 
   return (
-    <Link to={`/product/${productId}`}>
+    <a href={`/product/${productId}`}>
       <div className="bg-slate-100 p-6 rounded-sm">
         <div>
           <img src={productImage} alt="" />
@@ -59,6 +59,6 @@ export function Product({
           </button>
         </div>
       </div>
-    </Link>
+    </a>
   )
 }

@@ -7,9 +7,8 @@ import { Link } from "react-router-dom"
 export function Categories() {
   function Categorie({ categorieName, categorieImage }: any) {
     return (
-      <Link
-        to={`./categories/${categorieName}`}
-        replace
+      <a
+        href={`./categories/${categorieName}`}
         className="w-[25%] flex flex-col text-center relative"
       >
         <div className="cursor-pointer flex justify-center items-center bg-stone-400 bg-opacity-40 absolute w-full h-[91%] duration-300 z-10 transition opacity-0 hover:opacity-100 ">
@@ -19,7 +18,7 @@ export function Categories() {
               data-te-ripple-color="light"
               className="text-lg font-bold transition bg-green-400 rounded-sm p-2 py-1"
             >
-              <Link to={`./categories/${categorieName}`}>Shop now</Link>
+              <a href={`./categories/${categorieName}`}>Shop now</a>
             </button>
           </div>
         </div>
@@ -29,7 +28,7 @@ export function Categories() {
           alt={`${categorieName} image`}
         />
         <h1 className="text-lg font-bold mt-4">{categorieName}</h1>
-      </Link>
+      </a>
     )
   }
 
