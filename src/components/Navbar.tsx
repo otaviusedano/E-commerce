@@ -15,7 +15,7 @@ export function Navbar() {
   console.log(productsInCart)
 
   const priceTotal = productsInCart.reduce(
-    (acc: any, curr: any) => acc + curr.promotionPrice * curr.quantity,
+    (acc: number, curr: any) => acc + curr.promotionPrice * curr.quantity,
     0
   )
 

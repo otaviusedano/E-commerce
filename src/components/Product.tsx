@@ -1,8 +1,8 @@
-import { useEffect } from "react"
 import { MdOutlineEuro } from "react-icons/md"
 import { Link } from "react-router-dom"
 
 import { AppFunctions } from "../context/AppProvider"
+import { ScrollToTop } from "./ScrollToTop"
 
 export function Product({
   productPrice,
@@ -24,7 +24,8 @@ export function Product({
   const truePrice = priceWithPromotion(productPrice, promotionPercent)
 
   return (
-    <a href={`/product/${productId}`}>
+    <Link to={`/product/${productId}`}>
+      <ScrollToTop />
       <div className="bg-slate-100 p-6 rounded-sm">
         <div>
           <img src={productImage} alt="" />
@@ -59,6 +60,6 @@ export function Product({
           </button>
         </div>
       </div>
-    </a>
+    </Link>
   )
 }
