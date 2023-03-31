@@ -19,7 +19,7 @@ export function Hero() {
   const Slides = slides.map((slide) => <img key={slide} src={slide}></img>)
 
   return (
-    <main className=" mx-auto mobile:w-3/4 tablet:max-w-[1248px] px-4 py-1 text-slate-300">
+    <main className=" mx-auto laptop:w-3/4 max-w-[1248px] px-4 py-1 text-slate-300">
       <div className="overflow-hidden relative">
         <div
           className=" w-full flex transition-transform ease-out duration-500"
@@ -29,7 +29,7 @@ export function Hero() {
         </div>
         <div className="bg-slate-900 hover:text-slate-200 bg-opacity-30 flex justify-center items-center transition-all hover:bg-opacity-40 absolute top-0 z-40 h-full w-full">
           <div className="flex flex-col items-center">
-            <h1 className="text-2xl mb-4 font-bold">
+            <h1 className="text-2xl mb-10 laptop:mb-4 font-bold">
               Unique funitures for you
             </h1>
             <Link

@@ -10,7 +10,7 @@ export function Categories() {
     return (
       <Link
         to={`./categories/${categorieName}`}
-        className="w-[25%] flex flex-col text-center relative"
+        className="flex flex-col text-center relative"
       >
         <div className="cursor-pointer flex justify-center items-center bg-stone-400 bg-opacity-40 absolute w-full h-[91%] duration-300 z-10 transition opacity-0 hover:opacity-100 ">
           <div>
@@ -43,7 +43,7 @@ export function Categories() {
           your eye. and don't
         </span>
       </div>
-      <div className="flex gap-8">
+      <div className="grid laptop:grid-cols-[1fr_1fr_1fr_1fr] tablet:grid-cols-[1fr_1fr_1fr] grid-cols-[1fr_1fr] mobile:grid-cols-[1fr] largeMobile:grid-cols-[1fr_1fr] gap-8">
         <Categorie
           categorieName="Living Room"
           categorieImage={imageLivingRoom}

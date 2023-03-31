@@ -8,7 +8,7 @@ export function CategoriesSimple() {
   return (
     <div className="h-24 max-w-[1248px] mx-auto px-4 mt-8">
       <h1 className="mb-12 text-center text-2xl font-bold">{categoryName}</h1>
-      <div className="flex gap-4">
+      <div className="flex flex-wrap gap-4">
         <CategorieSimple categorieName="All" />
         <CategorieSimple categorieName="Sales" />
         <CategorieSimple categorieName="Kitchen" />

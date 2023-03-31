@@ -5,11 +5,11 @@ import { SaleItems } from "../components/SaleItems"
 
 export function ProductPage() {
   return (
-    <div>
+    <>
       <Navbar />
       <ProductDetails />
       <SaleItems />
       <Footer />
-    </div>
+    </>
   )
 }

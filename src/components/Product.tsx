@@ -32,7 +32,7 @@ export function Product({
         </div>
         <h1 className="text-xl my-2 mt-4 font-medium">{productName}</h1>
         <div className="flex justify-between items-center">
-          <div className="flex items-center">
+          <div className="flex items-center flex-col pr-3">
             {promotionPercent ? (
               <>
                 <span className="text-xs line-through mr-3 text-gray-400">
@@ -44,17 +44,17 @@ export function Product({
                 </div>
               </>
             ) : (
-              <>
+              <div>
                 <MdOutlineEuro className="inline-block mr-1" size={12} />
                 <span className=" mr-3 text-stone-900">{productPrice}</span>
-              </>
+              </div>
             )}
           </div>
           <button
             onClick={() => handleAddProductToCart(product)}
             data-te-ripple-init
             data-te-ripple-color="light"
-            className="font-bold p-1 px-3 transition-colors hover:border-green-400 hover:bg-green-400 rounded-sm border border-stone-900"
+            className="font-bold p-1 laptop:px-3 px-1 transition-colors hover:border-green-400 hover:bg-green-400 rounded-sm border border-stone-900"
           >
             Buy now
           </button>

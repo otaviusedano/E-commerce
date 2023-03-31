@@ -3,9 +3,9 @@ import imageCouch3 from "../assets/poster/imagem poster 3.jpg"
 
 export function Poster() {
   return (
-    <div className=" max-w-[1248px] mx-auto p-4 my-[8.33%] text-stone-900 flex justify-between">
+    <div className=" max-w-[1248px] mx-auto p-4 my-[8.33%] flex laptop:flex-row flex-col-reverse text-stone-900 justify-between">
       <div className="flex flex-col gap-8 my-auto">
-        <h1 className="text-5xl font-bold tracking-wide leading-tight">
+        <h1 className="laptop:text-5xl text-3xl font-bold tracking-wide leading-tight">
           Own new colection for your luxury living room
         </h1>
         <span className="text-xl font-medium text-stone-400 w-[80%]">
@@ -25,7 +25,11 @@ export function Poster() {
           </Link>
         </div>
       </div>
-      <img className="w-1/3 rounded-sm" src={imageCouch3} alt="" />
+      <img
+        className=" laptop:w-1/3 laptop:mb-0 mb-4 rounded-sm"
+        src={imageCouch3}
+        alt=""
+      />
     </div>
   )
 }

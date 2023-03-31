@@ -33,10 +33,12 @@ export function ProductDetails() {
 
       return (
         <div key={key} className="text-center p-6">
-          <h1 className="text-3xl font-bold mb-6">{product.name}</h1>
-          <div className="flex items-center">
-            <img className="w-[40%] ml-12" src={product.image} />
-            <div className="text-start p-20">
+          <h1 className="text-3xl font-bold laptop:mb-6 mb-20">
+            {product.name}
+          </h1>
+          <div className="laptop:flex grid grid-cols-1 items-center justify-center">
+            <img className="laptop:w-[40%] laptop:ml-12" src={product.image} />
+            <div className="text-start p-6 laptop:p-20">
               <span className="text-lg">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. A modi
                 eos quos repellendus at dolorem architecto, nisi, officia error
@@ -46,7 +48,7 @@ export function ProductDetails() {
                 consectetur pariatur beatae. Ullam error hic est dolorem id,
                 ipsa iste delectus excepturi fugiat provident.
               </span>
-              <div className="grid grid-cols-[1fr_1fr_1fr] items-center mt-10">
+              <div className="grid laptop:grid-cols-[1fr_1fr_1fr] gap-6 items-center justify-center mt-10">
                 <h1 className="font-semibold text-lg text-center">Quantity</h1>
                 <div className="grid grid-cols-[3rem_20px_3rem] items-center justify-center gap-4">
                   <button

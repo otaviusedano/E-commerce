@@ -39,8 +39,8 @@ export function ItemCart({ itemValues }: any) {
   }
 
   return (
-    <div className="grid grid-cols-[30fr_30fr_10fr] my-28 ">
-      <img className=" object-cover" src={image} alt="" />
+    <div className="grid grid-cols-[3fr_3fr_1fr] my-28 ">
+      <img className="object-cover" src={image} alt="" />
       <div className="flex flex-col justify-between items-baseline ml-8">
         <div className="mr-10">
           <h1 className="text-lg font-medium">{name}</h1>

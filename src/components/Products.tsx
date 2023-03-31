@@ -30,7 +30,7 @@ export function Products() {
   })
 
   return (
-    <section className="max-w-[1248px] mx-auto px-4 mt-16 mb-[6%] grid grid-cols-[1fr_1fr_1fr_1fr] gap-4">
+    <section className="max-w-[1248px] mx-auto px-4 mt-16 mb-[6%] grid laptop:grid-cols-[1fr_1fr_1fr_1fr] tablet:grid-cols-[1fr_1fr_1fr] grid-cols-[1fr_1fr] mobile:grid-cols-[1fr] largeMobile:grid-cols-[1fr_1fr] mobile:py-24 tablet:py-0 gap-4">
       {filteredsProduct}
     </section>
   )

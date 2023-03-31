@@ -9,7 +9,7 @@ export function SaleItems() {
   return (
     <div className="max-w-[1248px] mx-auto p-4 text-stone-900 my-5">
       <h1 className="text-2xl font-bold my-7">Sale Items</h1>
-      <div className="gap-11 grid grid-cols-[1fr_1fr_1fr_1fr]">
+      <div className="gap-8 grid laptop:grid-cols-[1fr_1fr_1fr_1fr] tablet:grid-cols-[1fr_1fr_1fr] grid-cols-[1fr_1fr] mobile:grid-cols-[1fr] largeMobile:grid-cols-[1fr_1fr]">
         <Product
           productPrice={499.99}
           productName="Luxury Sofa"

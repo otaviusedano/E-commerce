@@ -12,14 +12,10 @@ export function Navbar() {
 
   const { productsInCart, setIsOpenCart, isOpenCart }: any = AppFunctions()
 
-  console.log(productsInCart)
-
   const priceTotal = productsInCart.reduce(
     (acc: number, curr: any) => acc + curr.promotionPrice * curr.quantity,
     0
   )
-
-  console.log(priceTotal.toFixed(2))
 
   function handleOpenMenu() {
     setIsOpenMenu(!isOpenMenu)
@@ -92,7 +88,7 @@ export function Navbar() {
       </ul>
       {isOpenCart ? (
         <div>
-          <div className="fixed right-0 top-0 z-50 w-[30%] bg-slate-100">
+          <div className="fixed right-0 top-0 z-50 laptop:w-[30%] w-full bg-slate-100">
             <div className="flex items-center p-6 justify-between">
               <h1 className="font-bold text-xl">Your Shopping Cart</h1>
               <IoIosExit
@@ -103,7 +99,7 @@ export function Navbar() {
             </div>
           </div>
           <nav
-            className="fixed overflow-auto top-0 right-0 z-[49] h-screen w-[30%] translate-x-full  shadow-[0_4px_12px_0_rgba(0,0,0,0.07),_0_2px_4px_rgba(0,0,0,0.05)] data-[te-sidenav-hidden='false']:-translate-x-0 bg-slate-100"
+            className="fixed overflow-auto top-0 right-0 z-[49] h-screen laptop:w-[30%] w-full translate-x-full  shadow-[0_4px_12px_0_rgba(0,0,0,0.07),_0_2px_4px_rgba(0,0,0,0.05)] data-[te-sidenav-hidden='false']:-translate-x-0 bg-slate-100"
             data-te-sidenav-init
             data-te-sidenav-hidden="false"
             data-te-sidenav-right="true"
@@ -115,7 +111,7 @@ export function Navbar() {
               <ItemsCart />
             </ul>
           </nav>
-          <div className="fixed right-0 bottom-0 z-50 w-[30%] shadow-[0_4px_12px_0_rgba(0,0,0,0.07),_0_2px_4px_rgba(0,0,0,0.05)] bg-slate-100">
+          <div className="fixed right-0 bottom-0 z-50 laptop:w-[30%] w-full shadow-[0_4px_12px_0_rgba(0,0,0,0.07),_0_2px_4px_rgba(0,0,0,0.05)] bg-slate-100">
             <div className="flex justify-between items-center gap-4 p-6">
               <div className=" flex items-center">
                 <span className="text-stone-900 text-xl font-bold px-2">
