@@ -12,7 +12,7 @@ export function AppProvider({ children }: PropsWithChildren) {
   const [productsInCart, setProductsInCart] = useState<any[]>([])
   const [count, setCount] = useState(1)
   const [isOpenCart, setIsOpenCart] = useState(false)
-  const [quantityTest, setQuantityTest] = useState(1)
+  const [isOpenMenu, setIsOpenMenu] = useState(false)
 
   const productAlreadyAdded = (products: [], productId: number) => {
     return products
@@ -29,9 +29,6 @@ export function AppProvider({ children }: PropsWithChildren) {
     setProductsInCart((products: any) => {
       setIsOpenCart(true)
 
-      setQuantityTest(product.quantity)
-      console.log(product.quantity)
-      console.log(quantityTest)
       if (productAlreadyAdded(products, product.id)) return [...products]
 
       return [
@@ -58,6 +55,8 @@ export function AppProvider({ children }: PropsWithChildren) {
       isOpenCart,
       handleAddProductToCart,
       priceWithPromotion,
+      isOpenMenu,
+      setIsOpenMenu,
     }),
     [
       productsInCart,
@@ -68,6 +67,8 @@ export function AppProvider({ children }: PropsWithChildren) {
       isOpenCart,
       handleAddProductToCart,
       priceWithPromotion,
+      isOpenMenu,
+      setIsOpenMenu,
     ]
   )
 
